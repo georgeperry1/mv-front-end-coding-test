@@ -16,4 +16,6 @@ You should:
 * Allow the user to sort the list.
 * Stick to the above design as much as possible.
 
+**Please push directly to this repo, do not create a fork. Place your work inside the `/test` folder**
+
 We’d like to see how you approach this challenge, and what process you take, so please aim to push regular commits to the repository as you work through the task.
