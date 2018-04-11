@@ -18,5 +18,18 @@
   "bugs": {
     "url": "https://github.com/modelvillage/mv-front-end-coding-test/issues"
   },
-  "homepage": "https://github.com/modelvillage/mv-front-end-coding-test#readme"
+  "homepage": "https://github.com/modelvillage/mv-front-end-coding-test#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "dotenv": "^5.0.1",
+    "file-loader": "^1.1.11",
+    "react-hot-loader": "^4.0.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0"
+  }
 }
