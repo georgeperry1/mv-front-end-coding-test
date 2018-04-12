@@ -1,6 +1,6 @@
 .suggested-container {
-  height: 80%;
-  width: 29%;
+  height: 78vh;
+  flex: 3;
   margin: 24px 12px 12px 24px;
   padding: 16px;
   background: rgb(255, 255, 255);

@@ -1,5 +1,6 @@
 .app-header {
   display: flex;
+  flex: auto;
   justify-content: center;
   height: 70px;
   width: 100%;
