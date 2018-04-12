@@ -6,8 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './Components/App';
-
-const store = {};
+import store from './Store/configureStore';
 
 ReactDOM.render(
   <Provider store={store}>
