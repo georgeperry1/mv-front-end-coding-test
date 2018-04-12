@@ -1,6 +1,5 @@
 'use strict';
 
-import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';

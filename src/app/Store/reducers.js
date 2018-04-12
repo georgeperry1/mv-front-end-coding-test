@@ -1,9 +1,9 @@
-//TODO: Split out reducers for SuggestedInfluencers and StarredInfluencers
-const defaultState = {};
+import { combineReducers } from 'redux';
 
-export default (state = defaultState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-}
+import suggest from './SuggestedReducer';
+import starred from './StarredReducer';
+
+export default combineReducers({
+  suggest,
+  starred,
+});
