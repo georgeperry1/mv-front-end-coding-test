@@ -1,0 +1,15 @@
+.suggested-container {
+  height: 80%;
+  width: 30%;
+  margin: 24px;
+  padding: 16px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 3px 3px 0 rgba(59,59,88,.15);
+  border: 1px solid #e1e2e3;
+}
+
+.suggested-header {
+  color: rgb(91, 91, 91);
+  font-weight: 400;
+}

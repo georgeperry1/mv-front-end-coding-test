@@ -4,4 +4,10 @@
   border: 0;
   outline: 0;
   font-size: 100%;
+  font-family: 'Muli', sans-serif;
+}
+
+.main {
+  background: #f6f5f5;
+  height: 100vh;
 }

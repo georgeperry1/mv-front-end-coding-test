@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import AppHeader from './AppHeader';
+import SuggestedInfluencers from './SuggestedInfluencers';
 
 import '../Styles/skeleton.css';
 import './App.css';
@@ -11,7 +12,7 @@ class App extends Component {
     return (
       <div className="main">
         <AppHeader />
-        <h1>Hello</h1>
+        <SuggestedInfluencers />
       </div>
     )
   }
