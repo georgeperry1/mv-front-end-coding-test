@@ -14,10 +14,14 @@ class SuggestedInfluencers extends Component {
     this.props.getSuggestedInfluencers();
   }
 
+  renderLoading = () => <Loader />;
+
   renderSuggestedInfluencers() {
-    //TODO: Add 'no items in list'
+    if (!this.props.suggestedInfluencers) {
+      this.renderLoading();
+    }
     return (
-      <SuggestedInfluencersList />
+      <SuggestedInfluencersList suggested={this.props.suggestedInfluencers}/>
     );
   }
 
@@ -32,6 +36,11 @@ class SuggestedInfluencers extends Component {
     )
   }
 }
+
+SuggestedInfluencers.propTypes = {
+  getSuggestedInfluencers: PropTypes.func,
+  suggestedInfluencers: PropTypes.object,
+};
 
 const mapStateToProps = (state) => {
   return {

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import suggest from './SuggestedReducer';
-import starred from './StarredReducer';
+import suggestedInfluencers from './SuggestedReducer';
+import starredInfluencers from './StarredReducer';
 
 export default combineReducers({
-  suggest,
-  starred,
+  suggestedInfluencers,
+  starredInfluencers,
 });
