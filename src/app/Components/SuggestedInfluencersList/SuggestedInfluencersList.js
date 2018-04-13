@@ -8,7 +8,7 @@ class SuggestedInfluencersList extends Component {
   render() {
     return (
       <div className="suggested-list-container">
-        <h5>List</h5>
+        <SuggestedInfluencersListItem />
       </div>
     )
   }

@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import * as actions from '../../Store/actions';
 
 import SuggestedInfluencersList from '../SuggestedInfluencersList';
 
 import './SuggestedInfluencers.css';
 
 class SuggestedInfluencers extends Component {
+
+  componentDidMount() {
+    this.props.getSuggestedInfluencers();
+  }
 
   renderSuggestedInfluencers() {
     //TODO: Add 'no items in list'
@@ -26,4 +33,14 @@ class SuggestedInfluencers extends Component {
   }
 }
 
-export default SuggestedInfluencers;
+const mapStateToProps = (state) => {
+  return {
+    suggestedInfluencers: state.suggestedInfluencers,
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  getSuggestedInfluencers: () => dispatch(actions.getSuggestedInfluencers()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SuggestedInfluencers);

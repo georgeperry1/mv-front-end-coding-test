@@ -1,4 +1,4 @@
-{
+const suggestedInfluencersData = {
   "data": [
     {
       "influencer_id": 123,
@@ -23,3 +23,5 @@
     }
   ]
 }
+
+export default suggestedInfluencersData;

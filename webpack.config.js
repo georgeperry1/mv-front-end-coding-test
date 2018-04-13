@@ -4,11 +4,10 @@ const path = require('path');
 
 //Set up Dist and Src Directories
 const DIST_DIR = path.resolve(__dirname, "dist");
-const SRC_DIR = path.resolve(__dirname, "src");
 
 //Set up configuration
 const config = {
-  entry: SRC_DIR + '/app/index.js',
+  entry: ['babel-polyfill', './src/app/index.js'],
   output: {
     path: DIST_DIR + '/app/',
     filename: 'bundle.js',
@@ -32,6 +31,10 @@ const config = {
       {
         test: /\.(png|jpg|gif|svg)$/,
         use: ['file-loader']
+      },
+      {
+        test: /\.json$/,
+        use: ['json-loader']
       }
     ]
   }

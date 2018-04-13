@@ -5,7 +5,7 @@ import './SuggestedInfluencersListItem.css';
 
 const SuggestedInfluencersListItem = ({ influencer }) => (
   <div className="suggested-list-item">
-    <h5>Item</h5>
+    <p>Item</p>
   </div>
 );
 
