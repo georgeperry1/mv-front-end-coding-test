@@ -5,8 +5,15 @@ import './SuggestedInfluencersListItem.css';
 
 const SuggestedInfluencersListItem = ({ influencer }) => (
   <div className="suggested-list-item">
-    <img src={influencer.influencer_instagram_profile_image} alt="suggested-icon"/>
-    <p>{influencer.influencer_full_name}</p>
+    <img
+      className="suggested-image"
+      src={influencer.influencer_instagram_profile_image}
+      alt="suggested-image"
+    />
+    <div className="suggested-name-container">
+      <p className="suggested-name">{influencer.influencer_full_name}</p>
+      <p className="suggested-username">{influencer.influencer_instagram_username}</p>
+    </div>
   </div>
 );
 

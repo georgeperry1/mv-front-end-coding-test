@@ -19,9 +19,7 @@ class SuggestedInfluencersList extends Component {
   render() {
     return (
       <div className="suggested-list-container">
-        <div>
-          {this.renderListItems()}
-        </div>
+        {this.renderListItems()}
       </div>
     )
   }
