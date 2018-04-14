@@ -1,21 +1,28 @@
-import Immutable from 'seamless-immutable';
-
 import * as types from './actionTypes';
 
-const defaultState = Immutable({
-  suggestedInfluencers: {},
-});
+const defaultState = {
+  isFetching: false,
+  suggestedInfluencers: [],
+};
 
 export default (state = defaultState, action) => {
   switch (action.type) {
     case types.SUGGESTED_FETCHED:
-      return state;
+      return {
+        ...state,
+        isFetching: action.isFetching,
+      }
     case types.SUGGESTED_FETCHED_SUCCESS:
-      return state.merge({
-        suggestedInfluencers: action.suggestedInfluencers
-      });
+      return {
+        ...state,
+        suggestedInfluencers: action.suggestedInfluencers,
+        isFetching: action.isFetching,
+      }
     case types.SUGGESTED_FETCHED_FAILURE:
-      return state;
+    return {
+      ...state,
+      isFetching: false,
+    }
     default:
       return state;
   }

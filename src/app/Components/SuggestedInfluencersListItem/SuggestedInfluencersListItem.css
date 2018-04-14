@@ -1,6 +1,8 @@
 .suggested-list-item {
-  height: 20px;
-  width: 60px;
+  display: flex;
+  height: 30%;
+  width: 400px;
   border-radius: 5px;
   border: 1px solid #e1e2e3;
+  padding: 5px;
 }

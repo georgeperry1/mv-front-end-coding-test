@@ -5,32 +5,47 @@ import { connect } from 'react-redux';
 import * as actions from '../../Store/actions';
 
 import SuggestedInfluencersList from '../SuggestedInfluencersList';
+import Loader from '../Loader';
 
 import './SuggestedInfluencers.css';
 
 class SuggestedInfluencers extends Component {
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.getSuggestedInfluencers();
   }
 
-  renderLoading = () => <Loader />;
+  renderLoading() {
+    return (
+      <Loader />
+    )
+  }
 
   renderSuggestedInfluencers() {
-    if (!this.props.suggestedInfluencers) {
-      this.renderLoading();
+    const { suggestedInfluencers } = this.props;
+    if (!suggestedInfluencers.length) {
+      return <h6>No influencers available</h6>;
     }
     return (
-      <SuggestedInfluencersList suggested={this.props.suggestedInfluencers}/>
+      <SuggestedInfluencersList suggested={suggestedInfluencers}/>
     );
   }
 
   render() {
+    const { isFetching } = this.props;
     return (
       <div className="suggested-container">
         <h5 className="suggested-header">Suggested Influencers</h5>
         <div>
-          {this.renderSuggestedInfluencers()}
+          {isFetching ? (
+            <div>
+              {this.renderLoading()}
+            </div>
+          ) : (
+            <div>
+              {this.renderSuggestedInfluencers()}
+            </div>
+          )}
         </div>
       </div>
     )
@@ -38,12 +53,14 @@ class SuggestedInfluencers extends Component {
 }
 
 SuggestedInfluencers.propTypes = {
+  isFetching: PropTypes.bool,
   getSuggestedInfluencers: PropTypes.func,
-  suggestedInfluencers: PropTypes.object,
+  suggestedInfluencers: PropTypes.array,
 };
 
 const mapStateToProps = (state) => {
   return {
+    isFetching: state.isFetching,
     suggestedInfluencers: state.suggestedInfluencers,
   }
 }

@@ -8,8 +8,11 @@ const suggestedInfluencersService = store => next => action => {
         ...action,
         type: types.SUGGESTED_FETCHED_SUCCESS,
         suggestedInfluencers: suggestedInfluencersData,
+        isFetching: !action.isFetching,
       }
-      store.dispatch(newAction);
+      const newActionDispatch = () => store.dispatch(newAction);
+      // To simulate async API call
+      setTimeout(newActionDispatch, 2000);
     } else {
       let newAction = {
         ...action,
