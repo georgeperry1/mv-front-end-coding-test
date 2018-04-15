@@ -26,7 +26,7 @@ class SuggestedInfluencersList extends Component {
 }
 
 SuggestedInfluencersList.propTypes = {
-  suggestedInfluencers: PropTypes.object,
+  suggested: PropTypes.array,
 };
 
 export default SuggestedInfluencersList;

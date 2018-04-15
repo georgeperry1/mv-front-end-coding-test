@@ -18,7 +18,9 @@ const suggestedInfluencersService = store => next => action => {
         ...action,
         type: types.SUGGESTED_FETCHED_FAILURE
       }
-      store.dispatch(newAction);
+      const newActionDispatch = () => store.dispatch(newAction);
+      // To simulate async API call
+      setTimeout(newActionDispatch, 1200);
     }
   }
   if (action.type === types.ADD_SUGGESTED) {
@@ -32,7 +34,7 @@ const suggestedInfluencersService = store => next => action => {
     // To simulate async API call
     setTimeout(newActionDispatch, 1200);
   }
-  return next(action)
+  return next(action);
 }
 
 export default suggestedInfluencersService;

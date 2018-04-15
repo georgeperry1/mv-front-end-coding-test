@@ -24,6 +24,22 @@ export default (state = defaultState, action) => {
         ...state,
         isFetching: false,
       }
+    case types.STARRED_FETCHED:
+      return {
+        ...state,
+        isFetching: action.isFetching,
+      }
+    case types.STARRED_FETCHED_SUCCESS:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+        isFetching: action.isFetching,
+      }
+    case types.STARRED_FETCHED_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+      }
     case types.ADD_SUGGESTED:
       return {
         ...state,
