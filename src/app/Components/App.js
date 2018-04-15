@@ -5,7 +5,6 @@ import AppHeader from './AppHeader';
 import SuggestedInfluencers from './SuggestedInfluencers';
 import StarredInfluencers from './StarredInfluencers';
 
-import '../Styles/skeleton.css';
 import './App.css';
 
 class App extends Component {

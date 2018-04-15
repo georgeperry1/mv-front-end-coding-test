@@ -12,9 +12,9 @@ const SuggestedInfluencersListItem = ({ influencer }) => (
       <p className="suggested-name">{influencer.influencer_full_name}</p>
       <p className="suggested-username">{influencer.influencer_instagram_username}</p>
     </div>
-    <div className="suggested-add">
+    <button className="suggested-add">
       +
-    </div>
+    </button>
   </div>
 );
 
