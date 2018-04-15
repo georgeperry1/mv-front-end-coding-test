@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import InfluencerImage from '../InfluencerImage';
+import InfluencerInstagram from '../InfluencerInstagram';
 
 import './SuggestedInfluencersListItem.css';
 
@@ -10,7 +11,7 @@ const SuggestedInfluencersListItem = ({ influencer }) => (
     <InfluencerImage influencer={influencer}/>
     <div className="suggested-name-container">
       <p className="suggested-name">{influencer.influencer_full_name}</p>
-      <p className="suggested-username">{influencer.influencer_instagram_username}</p>
+      <InfluencerInstagram influencer={influencer}/>
     </div>
     <button className="suggested-add">
       +
