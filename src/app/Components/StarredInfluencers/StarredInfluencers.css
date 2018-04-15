@@ -8,7 +8,6 @@
   box-shadow: 0 3px 3px 0 rgba(59,59,88,.15);
   border: 1px solid #e1e2e3;
   display: inline-block;
-  overflow-x: scroll;
 }
 
 .starred-header {
