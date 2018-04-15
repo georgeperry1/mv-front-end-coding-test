@@ -10,6 +10,7 @@
   flex-direction: row;
   text-decoration: none;
   color: inherit;
+  align-items: center;
 }
 
 .influencer-username {
@@ -17,6 +18,6 @@
 }
 
 .instagram-logo {
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
 }
