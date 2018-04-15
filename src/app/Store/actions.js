@@ -20,3 +20,10 @@ export const addSuggestedInfluencer = (influencer) => {
     influencer,
   }
 };
+
+export const deleteStarredInfluencer = (influencer) => {
+  return {
+    type: types.DELETE_STARRED,
+    influencer,
+  }
+};
