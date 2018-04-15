@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import InfluencerImage from '../InfluencerImage';
 import InfluencerInstagram from '../InfluencerInstagram';
+import DeleteInfluencer from '../DeleteInfluencer';
 
 import './StarredInfluencersListItem.css';
 
@@ -26,6 +27,7 @@ class StarredInfluencersListItem extends Component {
           <p className="starred-stats">{engagement}%</p>
           <p className="starred-label">Engagement</p>
         </div>
+        <DeleteInfluencer influencer={influencer}/>
       </div>
     )
   }
