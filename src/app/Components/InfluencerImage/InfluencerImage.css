@@ -1,0 +1,16 @@
+.influencer-image-border {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  border-radius: 50%;
+  max-width: 54px;
+  max-height: 54px;
+  background: linear-gradient(to right, #40b5f7, #f682f1);
+}
+
+.influencer-image {
+  border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+  margin: 3px 3px 3px 3px;
+}
