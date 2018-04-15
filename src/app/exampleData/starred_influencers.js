@@ -1,4 +1,4 @@
-const starredInfluencersData =  [
+const starredInfluencersData = [
   {
     "influencer_id": 987,
     "influencer_full_name": "Anna Griffin",

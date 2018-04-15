@@ -23,9 +23,9 @@ class StarredInfluencers extends Component {
 
   renderStarredInfluencers() {
     const { starredInfluencers } = this.props;
-    // if (!starredInfluencers.length) {
-    //   return <h6>No influencers available</h6>;
-    // }
+    if (!starredInfluencers.length) {
+      return <h6>No influencers available</h6>;
+    }
     return (
       <StarredInfluencersList starred={starredInfluencers}/>
     );
