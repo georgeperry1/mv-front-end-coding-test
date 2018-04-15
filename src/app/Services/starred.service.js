@@ -23,6 +23,17 @@ const starredInfluencersService = store => next => action => {
       setTimeout(newActionDispatch, 1400);
     }
   }
+  if (action.type === types.DELETE_STARRED) {
+    const newAction = {
+      ...action,
+      type: types.DELETE_STARRED_SUCCESS,
+      starredInfluencers: starredInfluencersData.filter(influencer => influencer !== action.influencer),
+      isFetching: !action.isFetching,
+    }
+    const newActionDispatch = () => store.dispatch(newAction);
+    // To simulate async API call
+    setTimeout(newActionDispatch, 1200);
+  }
   return next(action);
 }
 

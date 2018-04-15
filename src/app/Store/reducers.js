@@ -60,6 +60,22 @@ export default (state = defaultState, action) => {
         ...state,
         isFetching: false,
       }
+    case types.DELETE_STARRED:
+      return {
+        ...state,
+        isFetching: true,
+      }
+    case types.DELETE_STARRED_SUCCESS:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+        isFetching: false,
+      }
+    case types.DELETE_STARRED_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+      }
     default:
       return state;
   }
