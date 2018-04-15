@@ -1,9 +1,11 @@
 .starred-list-container {
-  margin: 5px;
+  margin: 10px;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
-  height: 500px;
+  height: 95%;
   position: relative;
   overflow-x: scroll;
+  border: 1px solid #e1e2e3;
+  border-radius: 5px;
+  padding: 5px;
 }
