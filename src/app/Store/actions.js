@@ -6,3 +6,10 @@ export const getSuggestedInfluencers = () => {
     isFetching: true,
   }
 };
+
+export const addSuggestedInfluencer = (influencer) => {
+  return {
+    type: types.ADD_SUGGESTED,
+    influencer: influencer,
+  }
+};

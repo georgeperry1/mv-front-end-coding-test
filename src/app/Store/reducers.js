@@ -1,11 +1,9 @@
-import suggestedInfluencers from './SuggestedReducer';
-import starredInfluencers from './StarredReducer';
-
 import * as types from './actionTypes';
 
 const defaultState = {
   isFetching: false,
   suggestedInfluencers: [],
+  starredInfluencers: [],
 };
 
 export default (state = defaultState, action) => {
@@ -22,10 +20,30 @@ export default (state = defaultState, action) => {
         isFetching: action.isFetching,
       }
     case types.SUGGESTED_FETCHED_FAILURE:
-    return {
-      ...state,
-      isFetching: false,
-    }
+      return {
+        ...state,
+        isFetching: false,
+      }
+    case types.ADD_SUGGESTED:
+      return {
+        ...state,
+        isFetching: true,
+      }
+    case types.ADD_SUGGESTED_SUCCESS:
+      return {
+        ...state,
+        suggestedInfluencers: action.suggestedInfluencers,
+        starredInfluencers: [
+          ...state.starredInfluencers,
+          action.influencer,
+        ],
+        isFetching: false,
+      }
+    case types.ADD_SUGGESTED_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+      }
     default:
       return state;
   }

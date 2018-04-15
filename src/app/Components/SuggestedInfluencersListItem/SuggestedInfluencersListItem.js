@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import AddInfluencer from '../AddInfluencer';
 import InfluencerImage from '../InfluencerImage';
 import InfluencerInstagram from '../InfluencerInstagram';
 
@@ -16,9 +17,7 @@ class SuggestedInfluencersListItem extends Component {
           <p className="suggested-name">{influencer.influencer_full_name}</p>
           <InfluencerInstagram influencer={influencer}/>
         </div>
-        <button className="suggested-add">
-          +
-        </button>
+        <AddInfluencer influencer={influencer}/>
       </div>
     )
   }

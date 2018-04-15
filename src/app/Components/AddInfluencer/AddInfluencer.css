@@ -1,0 +1,13 @@
+.add-influencer {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(150, 150, 150);
+  margin: 0px 10px 10px 0px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.add-influencer:hover {
+  color: rgb(91, 91, 91);
+}
