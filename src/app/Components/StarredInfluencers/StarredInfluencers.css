@@ -8,9 +8,11 @@
   box-shadow: 0 3px 3px 0 rgba(59,59,88,.15);
   border: 1px solid #e1e2e3;
   display: inline-block;
+  overflow-x: scroll;
 }
 
 .starred-header {
   color: rgb(91, 91, 91);
   font-weight: 400;
+  margin: 10px 10px 16px 10px;
 }

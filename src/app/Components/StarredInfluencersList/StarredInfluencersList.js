@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// import SuggestedInfluencersListItem from '../SuggestedInfluencersListItem';
+import StarredInfluencersListItem from '../StarredInfluencersListItem';
 
 import './StarredInfluencersList.css';
 
@@ -9,12 +9,11 @@ class StarredInfluencersList extends Component {
 
   renderListItems = () => {
     const { starred } = this.props;
-    console.log('Starred:', starred);
-    // return starred.map(influencer => {
-    //   return (
-    //     <StarredInfluencersListItem key={influencer.influencer_full_name} influencer={influencer}/>
-    //   )
-    // });
+    return starred.map(influencer => {
+      return (
+        <StarredInfluencersListItem key={influencer.influencer_full_name} influencer={influencer}/>
+      )
+    });
   }
 
   render() {
