@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../Store/actions';
 
 import StarredInfluencersList from '../StarredInfluencersList';
+import SortingControl from '../SortingControl';
 import Loader from '../Loader';
 
 import './StarredInfluencers.css';
@@ -24,7 +25,7 @@ class StarredInfluencers extends Component {
   renderStarredInfluencers() {
     const { starredInfluencers } = this.props;
     if (!starredInfluencers.length) {
-      return <h6>No influencers available</h6>;
+      return <p>No influencers available</p>;
     }
     return (
       <StarredInfluencersList starred={starredInfluencers}/>
@@ -35,7 +36,10 @@ class StarredInfluencers extends Component {
     const { isFetching } = this.props;
     return (
       <div className="starred-container">
-        <h5 className="starred-header">Starred Influencers</h5>
+        <div className="starred-top">
+          <h5 className="starred-header">Starred Influencers</h5>
+          <SortingControl />
+        </div>
         <div>
           {isFetching ? (
             <div>

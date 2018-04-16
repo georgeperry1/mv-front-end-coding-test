@@ -10,7 +10,13 @@
   display: inline-block;
 }
 
+.starred-top {
+  display: flex;
+  flex-direction: row;
+}
+
 .starred-header {
+  flex: 2;
   color: rgb(91, 91, 91);
   font-weight: 400;
   margin: 10px 10px 16px 10px;

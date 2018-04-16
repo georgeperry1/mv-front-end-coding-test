@@ -1,0 +1,26 @@
+.sorting-control-container {
+  flex: 1;
+  margin: 10px 10px 16px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.sorting-control-label {
+  flex: 2;
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+
+.sorting-control-menu {
+  flex: 6;
+  background: #f6f5f5;
+  border-radius: 5px;
+  border: 1px solid #e1e2e3;
+  height: 22px;
+  font-size: 12px;
+  color: rgb(91, 91, 91);
+}
+
+.sort-by-label {
+
+}
