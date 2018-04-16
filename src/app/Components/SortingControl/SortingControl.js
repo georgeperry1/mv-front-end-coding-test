@@ -2,21 +2,24 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import * as actions from '../../Store/actions';
+
 import './SortingControl.css';
 
 class SortingControl extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sortBy: 'Name (A - Z)',
+      sortBy: '',
     }
   }
 
   handleChange = (e) => {
-    console.log('CLICK:', e.target.value);
+    const { starredInfluencers } = this.props;
     this.setState({
       sortBy: e.target.value
     });
+    this.props.sortInfluencers(e.target.value, starredInfluencers);
   }
 
   listItems = () => {
@@ -56,15 +59,20 @@ class SortingControl extends Component {
 }
 
 SortingControl.propTypes = {
-  suggestedInfluencer: PropTypes.array,
-  starredInfluencer: PropTypes.array,
+  suggestedInfluencers: PropTypes.array,
+  starredInfluencers: PropTypes.array,
+  order: PropTypes.func,
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     suggestedInfluencers: state.suggestedInfluencers,
     starredInfluencers: state.starredInfluencers,
   }
 }
 
-export default connect(mapStateToProps, null)(SortingControl);
+const mapDispatchToProps = dispatch => ({
+  sortInfluencers: (order, starredInfluencers) => dispatch(actions.sortInfluencers(order, starredInfluencers))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SortingControl);

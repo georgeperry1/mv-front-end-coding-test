@@ -76,6 +76,38 @@ export default (state = defaultState, action) => {
         ...state,
         isFetching: false,
       }
+    case types.NAME_A_TO_Z:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+      }
+    case types.NAME_Z_TO_A:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+      }
+    case types.FOLLOWERS_HIGH_TO_LOW:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+      }
+    case types.FOLLOWERS_LOW_TO_HIGH:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+      }
+    case types.ENGAGEMENT_HIGH_TO_LOW:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+      }
+    case types.ENGAGEMENT_LOW_TO_HIGH:
+      return {
+        ...state,
+        starredInfluencers: action.starredInfluencers,
+      }
+    case types.DEFAULT_ORDER:
+      return state;
     default:
       return state;
   }

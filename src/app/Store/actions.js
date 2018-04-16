@@ -27,3 +27,11 @@ export const deleteStarredInfluencer = (influencer) => {
     influencer,
   }
 };
+
+export const sortInfluencers = (order, starredInfluencers) => {
+  return {
+    type: types.CHANGE_ORDER,
+    order,
+    starredInfluencers,
+  }
+};
