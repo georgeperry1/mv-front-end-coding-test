@@ -12,8 +12,11 @@ class SortingControl extends Component {
     }
   }
 
-  handleClick = () => {
-    console.log('CLICK');
+  handleChange = (e) => {
+    console.log('CLICK:', e.target.value);
+    this.setState({
+      sortBy: e.target.value
+    });
   }
 
   listItems = () => {
@@ -26,7 +29,13 @@ class SortingControl extends Component {
       'Engagement (Low - High)'
     ];
     return sortBy.map(label => (
-      <option className="sort-by-label" key={label}>{label}</option>
+      <option
+        className="sort-by-label"
+        key={label}
+        value={label}
+      >
+        {label}
+      </option>
     ))
   }
 
@@ -34,7 +43,11 @@ class SortingControl extends Component {
     return (
       <div className="sorting-control-container">
         <p className="sorting-control-label">Sort by:</p>
-        <select className="sorting-control-menu">
+        <select
+          className="sorting-control-menu"
+          onChange={this.handleChange}
+          value={this.state.sortBy}
+        >
           {this.listItems()}
         </select>
       </div>
