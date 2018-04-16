@@ -42,7 +42,9 @@ const starredInfluencersService = store => next => action => {
           ...action,
           type: types.NAME_A_TO_Z,
           starredInfluencers: [...action.starredInfluencers].sort((a, z) => {
-            return a.influencer_full_name - z.influencer_full_name;
+            if (a.influencer_full_name < z.influencer_full_name) return -1;
+            if (a.influencer_full_name > z.influencer_full_name) return 1;
+            return 0;
           }),
         }
         store.dispatch(newAction);
@@ -52,7 +54,9 @@ const starredInfluencersService = store => next => action => {
           ...action,
           type: types.NAME_Z_TO_A,
           starredInfluencers: [...action.starredInfluencers].sort((a, z) => {
-            return z.influencer_full_name - a.influencer_full_name;
+            if (z.influencer_full_name < a.influencer_full_name) return -1;
+            if (z.influencer_full_name > a.influencer_full_name) return 1;
+            return 0;
           }),
         }
         store.dispatch(newAction);
