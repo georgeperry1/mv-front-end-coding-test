@@ -61,7 +61,7 @@ class SortingControl extends Component {
 SortingControl.propTypes = {
   suggestedInfluencers: PropTypes.array,
   starredInfluencers: PropTypes.array,
-  order: PropTypes.func,
+  sortInfluencers: PropTypes.func,
 };
 
 const mapStateToProps = state => {
